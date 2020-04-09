@@ -1,7 +1,7 @@
 <template>
   <div class="circle1" @click="play">
       <div class="circle2"></div>
-       <img class="turn" src="$withBase(/music.jpg)" alt="">
+       <img class="turn" src="./img/music.jpg" alt="">
         <audio autoplay id="audio" ref="audio" src="https://sharefs.yun.kugou.com/202004100004/8d063674916cff635472134f597577de/G170/M07/16/11/SocBAF3H3aqAUYOEADmpdloW3bU827.mp3">
         您的浏览器不支持 audio 标签。
         </audio>
