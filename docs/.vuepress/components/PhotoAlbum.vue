@@ -1,5 +1,5 @@
 <template>
-<div class="container" draggable="false" @mousedown="returnFalse">
+<div class="container" draggable="false" @mousedown="returnFalse" v-if="check_flag">
   <div class="album" ref="album" @mousedown="returnFalse">
     <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3796661942,1362224026&fm=26&gp=0.jpg" alt="" width="150" height="200">
     <img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3328813059,4233954730&fm=26&gp=0.jpg" alt="" width="150" height="200">
@@ -17,6 +17,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      check_flag: true
+    }
+  },
   methods: {
     returnFalse(e) {
       e.preventDefault()
@@ -30,9 +35,18 @@ export default {
         unitDeg += 10
         album.style.transform = ` rotateY(${unitDeg * 0.2}deg)`
       }, 200);
-    }
+    },
+    //返回true表示为pc端打开，返回false表示为手机端打开
+    check() {
+      let flag = navigator.userAgent.match(/(phone|pod|iPhone|iPod|ios|Android|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)
+      return !flag;
+    },
   },
   mounted() {
+    this.check_flag = this.check()
+    if(!this.check_flag) {
+      return
+    }
     var album = this.$refs.album
     var imgs = this.$refs.album.children
     var len = imgs.length
@@ -75,11 +89,12 @@ export default {
         }
         this.onmouseup = (e) => { // 鼠标松开事件
           console.log('松开')
-          // clearTimeout(vm.timeout)
-          // vm.timeout = setTimeout(_ => {
-          //   clearInterval(vm.interval)
-          //   vm.setIntervalFunc()
-          // }, 3000)
+          clearInterval(vm.interval)
+          clearTimeout(vm.timeout)
+          vm.timeout = setTimeout(_ => {
+            clearInterval(vm.interval)
+            vm.setIntervalFunc()
+          }, 3000)
           this.onmousemove = null
         }
       }
@@ -89,7 +104,7 @@ export default {
 
   },
   beforeDestroy() {
-    if (this.interval) {
+    if (this.interval || this.timeout) {
       clearInterval(this.interval)
       clearTimeout(this.timeout)
     }

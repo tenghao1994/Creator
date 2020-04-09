@@ -3,6 +3,7 @@ title: 关于我
 isTimeLine: false
 sidebar: false
 isShowComments: true
+date: 2017-12-28
 ---
 
 <p align="center"><img style="border-radius:41%;" :src="$withBase('/assets/img/logo.jpg')" alt="znote-head" height=200 width=200></p>
@@ -15,5 +16,15 @@ isShowComments: true
 
 ### 联系我
 
-- <a class="zi zi_envelopeBold" zico="黑信封"></a> Email：[382988057@qq.com](mailto:382988057@qq.com)
-- <a class="zi zi_tmWeixin" zico="微信"></a> 微信：
+-  Email：[382988057@qq.com](mailto:382988057@qq.com)
+- <p class="tmWeixin"> 微信：<img :src="$withBase('/assets/about/me.jpg')" alt="znote-head" height=200 width=200></p>
+
+<style>
+  .tmWeixin{
+    display:flex;
+  }
+  .tmWeixin img{
+    width: 100px;
+    height: 100px;
+  }
+</style>

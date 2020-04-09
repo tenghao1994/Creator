@@ -1,6 +1,6 @@
 module.exports = {
   title: 'Creator',
-  description: 'Just playing around',
+  description: '人生若只如初见',
   base: '/Creator/',
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
@@ -157,4 +157,28 @@ module.exports = {
   },
   //主题配置
   theme: 'reco',
+  // 插件
+  plugins: [
+    [
+      '@vuepress/pwa', 
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: "发现新内容可用",
+          buttonText: "刷新"
+        }
+      }
+    ],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': '' // UA-00000000-0
+      }
+    ],
+    ['vuepress-plugin-code-copy', true],
+    // ['@vuepress/back-to-top'],
+    ['vuepress-plugin-smooth-scroll'],
+    require('./plugins/PluginTest/index')
+
+  ]
 }
