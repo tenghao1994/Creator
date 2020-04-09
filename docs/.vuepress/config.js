@@ -4,17 +4,17 @@ module.exports = {
   base: '/Creator/',
   head: [
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }],
-    [
-      "script", {
-          "language": "javascript",
-          "type": "text/javascript",
-          "src": "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"
-      },
-      "link", {
-        "rel":"stylesheet" ,
-        "href":"https://unpkg.com/gitalk/dist/gitalk.css"
-      }
-    ],
+    // [
+    //   "script", {
+    //       "language": "javascript",
+    //       "type": "text/javascript",
+    //       "src": "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"
+    //   },
+    //   "link", {
+    //     "rel":"stylesheet" ,
+    //     "href":"https://unpkg.com/gitalk/dist/gitalk.css"
+    //   }
+    // ],
     [
       "script", {
           "language": "javascript",
@@ -190,7 +190,7 @@ module.exports = {
     // ['@vuepress/back-to-top'],
     ['vuepress-plugin-smooth-scroll'],
     require('./plugins/PluginTest/index'),
-    require('./plugins/GitTalk/index')
+    // require('./plugins/GitTalk/index')
 
   ]
 }
