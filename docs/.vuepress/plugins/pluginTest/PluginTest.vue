@@ -1,5 +1,4 @@
 <template>
-  
   <div class="circle1" @click="play">
       <div class="circle2"></div>
        <img class="turn" src="/music.jpg" alt="">
