@@ -28,7 +28,7 @@ export default {
       id: decodeURI(path),      // Ensure uniqueness and length less than 50
       distractionFreeMode: false  // Facebook-like distraction free mode
     })
-
+    console.log(gitalk, ' gitalk')
     gitalk.render('gitalk-container')
   },
   beforeDestroy() {
