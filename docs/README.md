@@ -20,4 +20,7 @@ footer: MIT Licensed | Copyright © 2018-present Evan You--test-test
   html,body,#app{
     height: 100%;
   }
+  .navbar>a{
+    float: left;
+  }
 </style>
