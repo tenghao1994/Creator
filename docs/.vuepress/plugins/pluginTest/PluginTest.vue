@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import getGitalk from "../../common/getGitalk"
 export default {
   data() {
     return {
@@ -20,7 +21,8 @@ export default {
   },
   watch: {
     $route(to, from) {
-      
+      console.log('000000')
+      getGitalk.call(this, {pages: {}})
     }
   },
   mounted() {

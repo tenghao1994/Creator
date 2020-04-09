@@ -1,11 +1,11 @@
 export default ({pages})=> {
-  const path = window.location.pathname
-  // 获取当前页面信息
-  const dist = pages.filter(item => {
-    return item.path === path
-  })[0]
-
-  //只有在isNoPage是false的时候才会显示评论
+    var x=document.getElementById("gitalk-container")
+    if(x) {
+      x.remove(x.selectedIndex)
+    }
+    
+    const path = window.location.pathname
+    // 获取当前页面信息
     const page =document.querySelector('.page')
 
     const linkGitalk = document.createElement('link');
