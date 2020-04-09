@@ -1,0 +1,42 @@
+{
+  "name": "my-blog-fe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "dependencies": {
+    "alienupload": "^0.3.3",
+    "babel-loader": "^8.1.0",
+    "core-js": "^3.6.4",
+    "gitalk": "^1.6.2",
+    "vue-highlight.js": "^3.1.0",
+    "vue-loader": "^15.9.1"
+  },
+  "devDependencies": {
+    "@vuepress-reco/vuepress-plugin-rss": "1.0.0",
+    "@vuepress/plugin-google-analytics": "1.2.0",
+    "@vuepress/plugin-medium-zoom": "^1.0.2",
+    "@vuepress/plugin-pwa": "1.2.0",
+    "@vuepress/plugin-register-components": "1.2.0",
+    "axios": "^0.19.0",
+    "highlight": "^0.2.4",
+    "jquery": "^3.4.1",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^8.0.2",
+    "vue": "^2.6.11",
+    "vue-particles": "^1.0.9",
+    "vue-template-compiler": "^2.6.11",
+    "vuepress": "^1.4.0",
+    "vuepress-plugin-boxx": "0.0.4",
+    "vuepress-plugin-code-copy": "^1.0.6",
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-flowchart": "1.4.3",
+    "vuepress-plugin-sitemap": "2.3.0",
+    "vuepress-plugin-smooth-scroll": "0.0.9",
+    "vuepress-theme-reco": "1.2.2",
+    "whatwg-fetch": "3.0.0"
+  }
+}
