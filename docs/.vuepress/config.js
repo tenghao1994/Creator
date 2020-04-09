@@ -8,6 +8,17 @@ module.exports = {
       "script", {
           "language": "javascript",
           "type": "text/javascript",
+          "src": "https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"
+      },
+      "link", {
+        "rel":"stylesheet" ,
+        "href":"https://unpkg.com/gitalk/dist/gitalk.css"
+      }
+    ],
+    [
+      "script", {
+          "language": "javascript",
+          "type": "text/javascript",
           "src": "https://cdn.staticfile.org/jquery/1.7.2/jquery.min.js"
       }
     ],
@@ -178,7 +189,8 @@ module.exports = {
     ['vuepress-plugin-code-copy', true],
     // ['@vuepress/back-to-top'],
     ['vuepress-plugin-smooth-scroll'],
-    require('./plugins/PluginTest/index')
+    require('./plugins/PluginTest/index'),
+    require('./plugins/GitTalk/index')
 
   ]
 }
