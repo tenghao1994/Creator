@@ -10,7 +10,7 @@ function getRandom(max, min) {
     props: {
         count: {// 线条数量
             type: String,
-            default: '199'
+            default: '150'
         },
         opacity: {// 线条透明度
             type: String,

@@ -14,7 +14,7 @@ features:
   details: 练习code, 常见编程code-demo
 footer: MIT Licensed | Copyright © 2018-present Evan You--test-test
 ---
-<PhotoAlbum/>
+<!-- <PhotoAlbum/> -->
 <CanvasNest color='255,72,145' zIndex='-4' />
 <style>
   html,body,#app{
